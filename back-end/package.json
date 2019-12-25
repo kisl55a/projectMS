@@ -6,11 +6,12 @@
     "start": "nodemon ./bin/www",
     "server": "nodemon ./bin/www",
     "client": "npm start --prefix front-end",
-    "dev":"concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild":"npm install --prefix front-end && npm install && npm run dev"
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "npm install --prefix front-end && npm install && npm run dev"
   },
   "dependencies": {
     "bcrypt": "^3.0.6",
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "concurrently": "^5.0.2",
     "cookie-parser": "~1.4.4",
