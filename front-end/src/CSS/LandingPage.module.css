@@ -1,0 +1,400 @@
+/* :root {
+    --primary: #ddd;
+    --dark:#333;
+    --light:#fff;
+    --shadow:0 1px 5px rgba(104, 104, 104, 0.8);
+    --font: Montserrat, Roboto, Helvetica, Arial, sans-serif;
+} */
+
+html {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--dark);
+   scroll-behavior:smooth
+}
+
+body {
+    line-height: 1.4;
+}
+
+.btn {
+    background-color: var(--dark);
+    color: var(--light);
+    padding: 0.6rem 1.3rem;
+    text-decoration: none;
+    border: 0;
+    transition: all 500ms;
+
+}
+.btn:hover {
+    /* background-color: var(--light); */
+    color: rgb(255, 255, 255);
+
+    text-decoration: none;
+    /* padding: 0.7rem 1.4rem; */
+    -webkit-box-shadow: 6px 6px 6px 0px rgba(53, 50, 50, 0.49);
+    -moz-box-shadow:    6px 6px 6px 0px rgba(53, 50, 50, 0.49);
+    box-shadow:         6px 6px 6px 0px rgba(53, 50, 50, 0.49);
+        transition: all 500ms;
+
+}
+
+img {
+    max-width: 100%;
+    /* height: 200px; */
+}
+
+.wrapper {
+    background-color: var(--background-primary);
+    display: grid;
+    grid-gap: 20px;
+}
+
+.hide {
+    display: none;
+}
+
+.showMoreInfo {
+    display: block;
+}
+
+.bestSellersName {
+    /* padding-top: 2%; */
+    padding-left: 1.5rem;
+    /* padding-bottom: 22%; */
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.bestSellersBox {
+    /* display: block; */
+    margin-top: 0;
+    margin-bottom: 0;
+    /* background-color: var(--background-primary); */
+    /* margin-top: -3%;
+    margin-bottom: -3%; */
+}
+
+/* 
+ATTENTION! 
+Here is the height of the product images. I put some value but you can change it.
+There is also the same img in @media which changes automatically to 100% 
+ */
+
+.arrowDown {
+    width: 50%;
+    /* height: 30%; */
+    position: absolute;
+    /* justify-content: center; */
+    text-align: center;
+    /* justify-items: center; */
+    padding-left: 40%;
+    padding-right: auto;
+    bottom: 3%;
+    /* left: 50%; */
+    /* padding-top: 50%; */
+    /* margin-top: 10%; */
+    /* vertical-align:bottom; */
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    justify-content: center;
+    /* display:inline-block; */
+}
+
+.img_block .content_block {
+    width: 100%;
+    height: 250px;
+    box-shadow: var(--shadow);
+    /* background:#f6f6f6; */
+    text-align: center;
+    /* min-height:250px; */
+    /* font-family: 'Roboto', sans-serif; */
+    font-weight: 400;
+    /* transition: all 3s; */
+    /* border-width: 4px;  */
+    /* border-style: solid;  */
+    /* border-color: #DDDDDD; */
+    /* box-shadow: 10px 10px 6px -6px #777777;  */
+}
+.column {
+    display: flex;
+    flex-direction: column;
+}
+.previousPrice {
+   margin-top: -12%;
+   color: rgba(255, 255, 255, 0.527);
+}
+.img_block .content_block {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    -moz-transition: all .4s;
+    -webkit-transition: all .4s;
+    -o-transition: all .4s;
+    transition: all .4s;
+    cursor: pointer;
+}
+
+.img_block .content_block .over_block {
+    /* background-color:rgba(0, 160, 150, 0); */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    -moz-transition: all 1s;
+    -webkit-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+}
+
+.img_block .content_block:hover .over_block {
+    display: block;
+    box-shadow: var(--shadow);
+    background-color: rgba(255, 255, 255, 0.212)
+}
+
+.img_block .content_block span {
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 0;
+    text-transform: uppercase;
+    font-size: 21px;
+    font-weight: bolder;
+    line-height: 60px;
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    -moz-transition: all .4s;
+    -webkit-transition: all .4s;
+    -o-transition: all .4s;
+    transition: all .4s;
+}
+
+.img_block .content_block span a {
+    text-decoration: none;
+    color: white;
+}
+
+.img_block .content_block:hover span {
+    bottom: 0;
+    height: 50%;
+    color: #ffffff;
+}
+
+.img_block img {
+    height: 100%;
+}
+
+/* Top container */
+
+.topContainer {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas: "showCase showCase" "showCase showCase";
+}
+
+/*  Showcase */
+
+.showCase {
+    grid-area: showCase;
+    height: 100vh;
+    background: url(https://images.pexels.com/photos/6105/flowers-shoes-white-modern.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    background-size: cover;
+    background-position: center;
+    padding: 3rem;
+    /* margin-bottom: 0; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    box-shadow: var(--shadow);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.showCase h1 {
+    font-size: 4rem;
+    margin-bottom: 0;
+    color: var(--light);
+}
+
+.showCase p {
+    font-size: 1.3rem;
+    margin-top: 0;
+    color: var(--light);
+}
+
+.topBox {
+    background: var(--background-primary);
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    box-shadow: var(--shadow);
+    padding: 1.5rem;
+    padding-top: 30%;
+    padding-bottom: 30%;
+}
+
+.topBox .price {
+    font-size: 2.5rem;
+}
+
+.middleContainer {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas: "showCase showCase" "showCase showCase";
+    ;
+}
+
+/*  Showcase */
+
+.showCaseMiddle {
+    grid-area: showCase;
+    height: 50vh;
+    background: url(https://images.pexels.com/photos/2710131/pexels-photo-2710131.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    background-size: cover;
+    background-position: center;
+    padding: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    box-shadow: var(--shadow);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.showCaseMiddle h1 {
+    font-size: 4rem;
+    margin-bottom: 0;
+    color: var(--light);
+}
+
+.showCaseMiddle p {
+    font-size: 1.3rem;
+    margin-top: 0;
+    color: var(--light);
+}
+
+.notification {
+    font-size: 15px;
+    margin-top: -5%;
+}
+
+/* Boxes */
+
+.boxes {
+    display: grid;
+    grid-gap: 20px;
+    margin: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax( 200px, 1fr));
+}
+
+.box {
+    background: var(--background-primary);
+    text-align: center;
+    padding: 1.5rem 2rem;
+    box-shadow: var(--shadow);
+}
+
+.info {
+    background: var(--background-primary);
+    box-shadow: var(--shadow);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 3rem;
+    align-items: center;
+}
+
+.stars {
+    margin-top: -10%;
+}
+
+/* products */
+
+.products {
+    margin: 1rem;
+    display: grid;
+    grid-gap: 20px;
+    /* background-color: var(--background-primary); */
+    scroll-snap-type: x mandatory;
+    grid-template-columns: repeat(auto-fit, minmax( 250px, 1fr));
+}
+
+.products img {
+    width: 99%;
+    /* height: 200px; */
+    box-shadow: var(--shadow);
+}
+
+/* Footer */
+
+footer {
+    margin-top: 2rem;
+    background: black;
+    color: var(--light);
+    text-align: center;
+    padding: 1rem;
+}
+
+@media(max-width: 700px) {
+    .top-container {
+        grid-template-areas: 'showCase showCase' 'topBoxA topBoxB';
+    }
+    .showCase h1 {
+        font-size: 2.5rem;
+    }
+    .info {
+        grid-template-columns: 1fr;
+    }
+    .info .btn {
+        display: block;
+        text-align: center;
+        margin: auto;
+    }
+    .stars {
+        margin-top: -5%;
+    }
+    .img_block a.content_block:hover span {
+        height: 40%;
+    }
+}
+
+@media (max-width: 700px) {
+    .topContainer {
+        grid-template-areas: 'showCase' 'topBoxA' 'topBoxB';
+    }
+}
+
+@media(max-width: 500px) {
+    .bestSellersName {
+        text-align: center;
+    }
+    .middleContainer {
+        display: none;
+    }
+    .img_block .content_block {
+        width: 100%;
+        height: 50vh;
+    }
+    .arrowDown {
+    width: 30%;
+    padding-left: 30%;
+    padding-right: auto;
+
+}
+}

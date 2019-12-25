@@ -1,0 +1,201 @@
+body {
+  background-color: var(--light);
+}
+
+.Container {
+  /* background: url(../background-images/pens-near-keyboard-and-paper-clips-1558690.jpg); */
+  /* background-size: cover; */
+  /* background-position: center; */
+  /* margin-top: var(--header-height); */
+  padding-top: 1px;
+  top: 0;
+  min-height: 100vw;
+  /* background-repeat: no-repeat; */
+}
+
+.Image {
+  width: 100%;
+  min-height: 100vh;
+  position: fixed;
+  z-index: -1;
+}
+
+.ProfilePage {
+  display: grid;
+  grid-template-areas: 
+  'LinksAndPersonalData ProfileData';
+  padding: 2%;
+  height: auto;
+  margin-top: 12vh;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  background-color: white;
+  /* border: 2px solid black; */
+  box-shadow: var(--shadow);
+  border-radius: 5px;
+  transition: height 4s ease-in-out;
+}
+
+.LinksAndPersonalData {
+  /* display: grid; */
+  grid-template-areas:
+  'ProfileInfo'
+  'SideNavBar';
+}
+
+.ProfileInfo {
+  display: grid;
+  grid-area: ProfileInfo;
+  grid-template-areas:
+  'ProfileInfoNames'
+  'BasicStatistics';
+  width: 20vw;
+  background-color: rgb(255, 255, 255);
+  opacity: 0.9;
+  height: 36vh;
+  /* border-radius: 5px; */
+  /* box-shadow: var(--shadow); */
+  /* border-bottom: 3px solid var(--dark); */
+}
+
+
+.ProfileInfoNames {
+  display: grid;
+  grid-area: ProfileInfoNames;
+  place-self: center;
+  justify-items: start;
+  /* grid-template-columns: 1fr 1fr;  */
+  width: 20vw;
+  color: var(--dark);
+  /* margin-left: 1.5vw; */
+}
+
+.DescriptionBox {
+  grid-area: DescriptionBox;
+  display: block;
+}
+
+.BasicStatistics {
+  display: flex;
+  /* flex-direction: column; */
+  max-width: 50vw;
+  /* place-self: center; */
+  align-items: center;
+  grid-area: BasicStatistics;
+}
+
+.BasicStatistics label,
+.BasicStatistics p {
+  margin: 0;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.Username {
+  /* color: var(--primary); */
+  color: var(--dark);
+  font-size: 3em;
+}
+
+.Email {
+  color: var(--gray);
+  font-size: 1.8em; 
+  transition: 0.2s ease-in-out;
+}
+
+.Email:hover {
+  color: var(--dark);
+}
+
+/* SideNavBar classes */
+
+.SideNavBar {
+  display: grid;
+  grid-area: SideNavBar;
+  /* background-color: var(--light); */
+  position: sticky;
+  top: 11vh;
+  width: 20vw;
+  padding-right: 5vw;
+  height: 8vh;
+  margin-top: 2vh;
+  /* padding-right: 1vw; */
+  background-color: rgb(255, 255, 255);
+  /* opacity: 0.9; */
+  /* border-right: 2px solid black; */
+  /* border-radius: 5px; */
+}
+
+.SideNavBar ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.SideNavBar ul li a {
+  text-decoration: none;
+
+}
+
+.ProfileData {
+  display: grid;
+  width: 63.2vw;
+  /* align-self: center; */
+  justify-self: center;
+  margin-top: 2vh;
+  /* margin-left: 5vw; */
+  grid-area: ProfileData;
+  background-color: transparent;
+}
+
+@media(max-width: 700px) {
+  .ProfilePage {
+    grid-template-areas: 
+      'ProfileInfo'
+      'SideNavBar' 
+      'ProfileData';
+    /* margin-left: 0; */
+    /* margin-right: 0; */
+  }
+
+  .ProfileInfo {
+    grid-template-areas: 
+    'ProfileInfoNames BasicStatistics';
+    width: 100%;
+  }
+
+  .ProfileInfoNames {
+    width: 50vw;
+  }
+
+  .BasicStatistics {
+    display: block;
+    align-self: center;
+  }
+
+  .BasicStatistics label {
+    padding: 0;
+  }
+
+  .SideNavBar {
+    border: 0;
+    /* border-bottom: 2px solid var(--dark); */
+    position: static;
+  }
+
+  .SideNavBar ul {
+    display: grid;
+    grid-template-columns: repeat(3, 30vw);
+    width: 100%;
+    /* margin-left: 2.5vw; */
+    /* margin-right: 2.5vw; */
+    place-items: center;
+    padding: 0 0px;
+    /* padding-bottom: 0.75em; */
+    /* border-bottom: 2px solid var(--dark); */
+  }
+
+  .ProfileData {
+    width: 100%;
+    margin-left: 0;
+  }
+}

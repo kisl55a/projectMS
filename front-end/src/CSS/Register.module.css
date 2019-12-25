@@ -1,0 +1,119 @@
+/* input:focus,
+button:focus {
+    outline: none;
+    border: var(--primary) solid 1px;
+} */
+
+body {
+    background-color: var(--background-primary);
+}
+
+.h2 {
+    min-width: 20vw;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.background {
+    /* padding: 2% 0;
+    flex-direction: column;
+    min-height: 100vh;
+    height: 100%;
+    width: 100vw;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: url(https://images.pexels.com/photos/632470/pexels-photo-632470.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    background-size: cover;
+    background-position: center; */
+}
+
+.backgroundImg {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+    /* -webkit-filter: blur(2px);
+    filter: blur(2px); */
+}
+
+.Login {
+    display: grid;
+    grid-template-columns: 25% 70px auto 70px 25%;
+    grid-template-rows: 25% auto 25%;
+}
+
+.LoginForm {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-primary);
+    text-align: left;
+    border: 2px solid var(--nonactive-border);
+    border-radius: 3px;
+    margin: auto;
+    padding: 10% 20%;
+    background-color: white;
+}
+
+.Form {
+    display: grid;
+    /* grid-gap: 10px; */
+}
+
+.EmailPassword {
+    display: grid;
+    grid-gap: 1em;
+}
+
+.RememberMe {
+    display: grid;
+    align-self: center;
+    grid-template-columns: 25px 1fr;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    /* margin: 5px 0px; */
+}
+
+.RememberMe label {
+    margin: 0;
+    padding: 0.4em;
+    margin: 0.25em 0;
+}
+
+.RememberMe span, input {
+    align-self: center;
+}
+
+.Buttons {
+    display: grid;
+    grid-gap: 5px;
+    margin-top: 1em;
+}
+
+#RegisterLink {
+    margin-top: 0.5em;
+}
+
+@media(max-width: 768px) {
+    .Login {
+        grid-template-columns: 2.5em auto 2.5em;
+    }
+
+    .LoginForm {
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+}
+
+@media(max-width: 425px ) {
+    .Login {
+        grid-template-columns: 1em auto 1em;
+    }
+}

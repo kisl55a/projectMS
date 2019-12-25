@@ -1,0 +1,103 @@
+.background .main {
+    /* display: flex; */
+    vertical-align: middle;
+    /* padding: 10% 0; */
+  }
+
+  .background .mainNo {
+    /* display: flex; */
+    vertical-align: middle;
+    padding: 3%;
+  }
+  .productImg {
+
+      /* width: 100%; */
+      width: auto;
+      /* max-width: 200rem;  */
+      max-height: 300px;
+  }
+  .price{
+      padding-top: -1rem;
+      padding-left: 0.5rem;
+      font-weight: 700;
+      font-size: xx-large;
+      /* color: rgb(255, 115, 0); */
+  }
+  .background {
+    padding: 10% 0;
+    flex-direction: column;
+    min-height: 100vh;
+    height: 100%;
+    /* width: 100vw; */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: url(https://images.pexels.com/photos/317355/pexels-photo-317355.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    background-size: cover;
+    background-position: center;
+  }
+  .backgroundNo {
+    padding: 5% 0;
+    flex-direction: column;
+    min-height: 100vh;
+    height: 100%;
+    width: 100vw;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: url(https://images.pexels.com/photos/317355/pexels-photo-317355.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    background-size: cover;
+    background-position: center;
+  }
+  .mainCon {
+    border-radius: 1%;
+    /* padding-top: 1%; */
+    box-shadow:0 1px 5px rgba(255, 255, 255, 0.418);
+    height: 100%;
+    /* padding: 3%; */
+    width: 100%;
+    /* margin-top: 5%; */
+    -webkit-box-shadow: 8px 4px 5px 0px rgba(0, 0, 0, 0.22);
+    -moz-box-shadow:    8px 4px 5px 0px rgba(0, 0, 0, 0.22);
+    box-shadow:         8px 4px 5px 0px rgba(0, 0, 0, 0.22);
+    background-color: rgba(255, 255, 255, 0.959);
+  }
+  
+
+  
+  .titleBar {
+    height: 20%;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  
+  @media(max-width: 500px) {
+    .mainCon {
+      border-radius: 1%;
+      padding-top: 1%;
+      box-shadow:0 1px 5px rgba(255, 255, 255, 0.418);
+      height: 100%;
+      padding: 3%;
+      width: 100%;
+      /* box-shadow: ; */
+      /* background: url(''); */
+      background-color: rgb(255, 255, 255);
+    }
+    .background {
+      flex-direction: column;
+      min-height: 100vh;
+      height: 100%;
+      width: 100vw;
+      background-color: white;
+      /* background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background: url(https://images.pexels.com/photos/6105/flowers-shoes-white-modern.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+      background-size: cover;
+      background-position: center; */
+    }
+  }

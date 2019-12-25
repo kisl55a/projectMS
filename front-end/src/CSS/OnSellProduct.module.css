@@ -1,0 +1,91 @@
+.OnSellProduct {
+    display: grid;
+    grid-template-areas: 
+    'Image ProductInfo Buttons';
+    width: 100%;
+    padding: 0.5em;
+    background-color: rgb(255, 255, 255);
+}
+
+.ImageAndDescription {
+    width: 100%;
+    padding-right: 1vw;
+}
+
+.Description {
+    margin-top: 1vh;
+}
+
+.Description p {
+    color: var(--dark);
+    font-size: 1.2em;
+}
+
+.Image {
+    grid-area: Image;
+    width: auto;
+    height: auto;
+}
+
+.ProductInfo {
+    grid-area: ProductInfo;
+    display: grid;
+    width: 30vw;
+    margin-left: 2vw;
+}
+
+.OldPrice {
+    text-decoration: line-through;
+}
+
+.NewPrice {
+    display: block;
+    background-color: var(--danger);
+    font-size: 1.2em;
+}
+
+.AmountOfProduct,
+.AmountOfRates,
+.AmountOfSoldProduct {
+    display: grid;
+    grid-template-columns: 50% 40% 10%;
+    align-items: center;
+    /* white-space: nowrap; */
+}
+
+.AmountOfProduct label,
+.AmountOfRates label,
+.AmountOfSoldProduct label {
+    padding: 0;
+}
+
+.Buttons {
+    grid-area: Buttons;
+}
+
+.Buttons button {
+    height: 49%;
+    width: 100%;
+}
+
+.Buttons a {
+    text-decoration: none;
+    color: var(--dark);
+}
+
+@media(max-width: 700px) {
+    .OnSellProduct {
+        grid-template-areas: 
+        'Image'
+        'ProductInfo'
+        'Buttons';
+    }
+
+    .ImageAndDescription {
+        border-bottom: 1px solid rgba(0,0,0,.1);
+    }
+
+    .ProductInfo {
+        width: 100%;
+    }
+}
